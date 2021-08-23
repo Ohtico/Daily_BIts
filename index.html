@@ -20,19 +20,21 @@
 
     <div class="tab-content m-4" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            
             <h4 class="text-white text-center">Practica tus conocimientos en la categoría que prefieras.</h4>
 
             <div class="container d-flex justify-content-center">
-                <img src="./image/logo-2582748_1280.png"
-                    class="rounded-circle mt-5" style="width: 6rem;" alt="HTML5">
+
+                <a href="./play/game.html" >
+                    <img src="./image/logo-2582748_1280.png" class="rounded-circle mt-5" style="width: 6rem;"
+                        alt="HTML5"> </a>
             </div>
             <div class="container d-flex justify-content-center text-white">
                 <h6>HTML</h6>
             </div>
             <div class="container d-flex justify-content-center">
-                <img src="./image/logo-2582747_1280.png"
-                    class="rounded-circle m-2" style="width: 6rem;" alt="HTML5">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png"
+                <img src="./image/logo-2582747_1280.png" class="rounded-circle m-2" style="width: 6rem;" alt="HTML5">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png"
                     class="rounded-circle m-2" style="width: 6rem;" alt="HTML5">
             </div>
             <div class="container d-flex justify-content-center text-white">
@@ -40,23 +42,110 @@
                 <h6 class="ms-5">JS</h6>
             </div>
             <div class="container d-flex justify-content-center">
-               <a href=""> <img src="http://lineadecodigo.com/wp-content/uploads/2014/04/bootstrap.png"
-                    class="rounded-circle m-2" style="width: 6rem;" alt="BOOTSTRAP"></a>
-                   <a href=""></a> <img src="https://seeklogo.com/images/M/materialize-logo-0FCAD8A6F8-seeklogo.com.png"
+                <a href=""> <img src="http://lineadecodigo.com/wp-content/uploads/2014/04/bootstrap.png"
+                        class="rounded-circle m-2" style="width: 6rem;" alt="BOOTSTRAP"></a>
+                <a href=""></a> <img src="https://seeklogo.com/images/M/materialize-logo-0FCAD8A6F8-seeklogo.com.png"
                     class="rounded-circle m-2" style="width: 6rem;" alt="HTML5">
             </div>
             <div class="container d-flex justify-content-center text-white">
                 <h6 class="me-4">BOOTSTRAP</h6>
                 <h6 class="">MATERIALIZE</h6>
             </div>
+
+
         </div>
 
 
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="container">
+                <h1 class="text-white">Estadisticas</h1>
+
+                <select class="form-select bg-dark text-white" aria-label="Default select example">
+                    <option selected>Seleccione desde Cuando</option>
+                    <option value="1">Los ultimos 7 Dias</option>
+                    <option value="2">Semana Anterior</option>
+                    <option value="3">Hace 15 Dias</option>
+                </select>
+            </div>
+            <section class="m-5">
+
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                    <div class="accordion-item m-2 bg-dark text-white">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Tiempo de estudio (Horas)
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                                body.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item m-2 bg-dark text-white">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Respuestas contestadas
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                                body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item m-2 bg-dark text-white">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Respuestas correctas
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
 
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+        </div>
+
+
+
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+            <div class="container">
+                <h1 class="text-white">Perfil</h1>
+                <div class="container d-flex justify-content-center p-4">
+                    <img src="https://ojodepezfotografos.com/wp-content/uploads/2019/03/SESION-DE-FOTOS-PERFIL-PROFESIONAL-10.jpg"
+                        class="rounded-circle mt-5" style="width: 6rem;" alt="HTML5">
+                </div>
+                <div class="container d-flex justify-content-center text-white">
+                    <h6>Carlos Peres</h6>
+                </div>
+                <div class="container d-flex justify-content-center p-2 text-white">
+                    <h6>carlitoperez@gmail.com</h6>
+                </div>
+                <div class="container d-flex justify-content-center text-white p-3">
+                    <h6><a onclick="cerrar()" class="text-danger">Cerrar Sesion</a></h6>
+                </div>
+
+
+
+            </div>
+
+        </div>
     </div>
 
 
@@ -90,6 +179,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="./script/index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

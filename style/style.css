@@ -3,3 +3,36 @@
 body{
     background: #000;
 }
+.form-range{
+    width: 85%;
+    margin-top: 30px;
+}
+.float-end{
+    margin-top: 30px;
+}
+.text-white{
+    margin-top: 30px;
+}
+h7{
+    width: 65vw;
+    padding-top: 40px;
+    font-size: 20px;
+}
+.btn{
+    width: 90vw;
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.comprobar{
+    width: 90vw;
+    margin-top: 30px;
+    margin-bottom: 20px ;
+    padding: 15px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+}
+.comprobar:active{
+    background: green;
+}
