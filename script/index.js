@@ -1,6 +1,11 @@
 
 
-let perfil = document.getElementById('perfil')
+let perfil = document.getElementById('perfil');
+
+function volver(){
+    window.location = "./index.html"
+}
+
 function cerrar() {
     swal.fire({
         title: 'Estas seguro que quieres cerrar sesion',
@@ -17,29 +22,26 @@ function cerrar() {
     })
 }
 
-function llamar() {
+function html() {
     let body = document.getElementById('body') //linea 32 boton X
-    body.innerHTML = `  <div class="container-fluid">
-                        <label for="customRange2" class="form-label float-end texto text-white"><i
-                        class="material-icons text-danger float-start">
-                        favorite</i>4</label>
-                        <button type="button" class="btn-close bg-dark" aria-label="Close"></button>  
-                        <div class="progress mt-4">
-                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    body.innerHTML = `  <div class="container-fluid mt-4 align-center">
+                        <div class="row">
+                        <div class="col col-lg-2">
+                        <button type="button" onclick="volver()" class="btn-close bg-dark" aria-label="Close"></button></div>
+                        <div class="col">
+                        <div class="progress" style="width: 60vw;">
+                        <div class="progress-bar " role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div></div>
                         </div>
-                        </div>
-                        <div class="container">
+                        <div class="col col-lg-2">
+                        <h6 class="text-white"><i class="material-icons text-danger justify-content-center">favorite</i>4</h6></div></div></div>
+                        <div class="container m-3">
                         <img src="../image/Property 1=1.png" class="float-start mt-3" style="width: 5rem;" alt="HTML5">
-                        <h7 class="text-white texto float-end"> ¿Todas las etiquetas HTML vienen en pares?</h7>
-                        </div>
-                        <div class="container">
-                        <button class="mt-5 btn btn-dark text-start" value="correcta" id="selec">Si <input type="radio" class="text-end"></button>
-                        <button class="mt-3 btn btn-dark text-start" value="mala" id="posible">No <input type="radio"></button>
-                        <button class="mt-3 btn btn-dark text-start" value="fail" id="correctas">No, algunas etiquetas HTML simples <input type="radio"></button>
-                        </div>
-                        <div class="container container-fluid position-absolute bottom-0">
-                        <button class="mt-3 comprobar btn-secondary text-center position-relativa bottom-0" onclick="comprobar()">COMPROBAR</button>
-                        </div>`
+                        <h7 class="text-white texto m-2 float-end"> ¿Qué etiqueta es semánticamente correcta para el contenido principal?</h7>
+                        <button class="mt-5 btn btn-dark text-start " value="correcta" id="selec">Si <input type="radio"></button>
+                        <button class="mt-3 btn btn-dark text-start " value="mala" id="posible">No <input type="radio"></button>
+                        <button class="mt-3 btn btn-dark text-start" value="fail" id="correctas">No, algunas etiquetas HTML simples <input type="radio"></button></div>
+                        <div class="container m-3 container-fluid position-absolute bottom-0">
+                        <button class="mt-3 comprobar btn-secondary text-center position-relativa bottom-0" onclick="comprobar()">COMPROBAR</button></div>`
 }
 function pintarPerfil(){
     let perfilLocal = JSON.parse(localStorage.getItem("usuario"));
