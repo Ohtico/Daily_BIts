@@ -78,6 +78,7 @@ ingreso.addEventListener('click', async () => {
     let verificar = datos.find(correo => correo.email.toLowerCase() == usuario.toLowerCase())
     if(verificar != undefined){
         localStorage.setItem('usuario', JSON.stringify(verificar))
+        window.location = "./index.html"; //al ingresar un correo valido, ingresar al index
     }else if(verificar == undefined){
         swal.fire({
             title: '<span class="text-white">Este usuario no existe',

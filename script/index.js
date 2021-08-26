@@ -10,10 +10,10 @@ function cerrar() {
         confirmButtonText: `Cerrar`
     })
 }
-function comprobar() {
-    let seleccion = document.querySelectorAll('.pro').value;
-    location.reload('./index.html'); //para volver a la pagina inicial
-}
+// function comprobar() {
+//     let seleccion = document.querySelectorAll('.pro').value;
+//     // location.reload('./index.html'); //para volver a la pagina inicial
+// }
 function llamar() {
     let body = document.getElementById('body')
     body.innerHTML = `<div class="container-fluid">
