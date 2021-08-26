@@ -9,7 +9,7 @@
     {
       "nombre": "Lili Johanna",
       "email": "lilijohanna@gmail.com",
-      "url": "aaaaa",
+      "url": "https://thumbs.dreamstime.com/b/icono-ejecutivo-joven-del-perfil-de-la-mujer-81933333.jpg",
       "id": 2
     },
     {
@@ -17,6 +17,12 @@
       "email": "josegarcias@gmail.com",
       "url": "aaaaa",
       "id": 3
+    },
+    {
+      "nombre": "hernani gonzales",
+      "email": "hernani@gmail.com",
+      "url": "wwwww",
+      "id": 4
     }
   ]
 }

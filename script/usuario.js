@@ -1,6 +1,6 @@
 
 let urlUsuario = ('http://localhost:4000/usuarios')
-
+let google = document.getElementById('google')
 let incribirse = document.getElementById('incribirse');
 let usuario = []
 
@@ -20,12 +20,8 @@ incribirse.addEventListener('click', async () => {
             let nombre = document.getElementById('swal-input1').value;
             let email = document.getElementById('swal-input2').value;
             let url = document.getElementById('swal-input3').value;
-
-
             if (nombre, email, url != '') {
-
                 let modificar = data.find(correo => correo.email.toLowerCase() == email.toLowerCase())
-
                 if (modificar != undefined) {
                     if (modificar.email.toLowerCase() == email.toLowerCase()) {
                         Swal.fire({
@@ -54,7 +50,7 @@ incribirse.addEventListener('click', async () => {
                     title: '<span class="text-white">Complete Todos los campos',
                     background: `rgba(127, 90, 240)`,
                     timer: 2500,
-                    icon: 'info',
+                    icon: 'warning',
                     showConfirmButton: false
                 })
             }
@@ -71,5 +67,47 @@ async function guardar(nombre, email, url) {
         }),
         headers: { "Content-Type": "application/json; charset=UTF-8" }
     })
-    console.log(resp)
 }
+
+let ingreso = document.getElementById('ingreso');
+
+ingreso.addEventListener('click', async () => {
+    let test = await fetch(urlUsuario)
+    let datos = await test.json()
+    let usuario = document.getElementById('exampleFormControlInput1').value;
+    let verificar = datos.find(correo => correo.email.toLowerCase() == usuario.toLowerCase())
+    if(verificar != undefined){
+        localStorage.setItem('usuario', JSON.stringify(verificar))
+    }else if(verificar == undefined){
+        swal.fire({
+            title: '<span class="text-white">Este usuario no existe',
+                            text: `${usuario}`,
+                            background: `rgba(127, 90, 240)`,
+                            timer: 2500,
+                            icon: 'warning',
+                            showConfirmButton: false
+        })
+    }
+    if(usuario == '') {
+        swal.fire({
+            title: '<span class="text-white">Complete Todos los campos',
+                            text: `${usuario}`,
+                            background: `rgba(127, 90, 240)`,
+                            timer: 2500,
+                            icon: 'warning',
+                            showConfirmButton: false
+        })
+    }
+})
+google.addEventListener('click', () => {
+
+    swal.fire({
+        title: '<span class="text-white">En construcción',
+        background: `rgba(127, 90, 240)`,
+        timer: 2500,
+        showConfirmButton: false,
+        html:   `<div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>`
+    })
+})

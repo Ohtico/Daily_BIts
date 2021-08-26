@@ -20,14 +20,14 @@
 
     <div class="tab-content m-4" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            
+
             <h4 class="text-white text-center">Practica tus conocimientos en la categoría que prefieras.</h4>
 
             <div class="container d-flex justify-content-center">
 
-                <a href="#" >
-                    <img src="./image/logo-2582748_1280.png" onclick="llamar()" class="rounded-circle mt-5" style="width: 6rem;"
-                        alt="HTML5"> </a>
+                <a href="#">
+                    <img src="./image/logo-2582748_1280.png" onclick="llamar()" class="rounded-circle mt-5"
+                        style="width: 6rem;" alt="HTML5"> </a>
             </div>
             <div class="container d-flex justify-content-center text-white">
                 <h6>HTML</h6>
@@ -125,31 +125,12 @@
 
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 
-            <div class="container">
-                <h1 class="text-white">Perfil</h1>
-                <div class="container d-flex justify-content-center p-4">
-                    <img src="https://ojodepezfotografos.com/wp-content/uploads/2019/03/SESION-DE-FOTOS-PERFIL-PROFESIONAL-10.jpg"
-                        class="rounded-circle mt-5" style="width: 6rem;" alt="HTML5">
-                </div>
-                <div class="container d-flex justify-content-center text-white">
-                    <h6>Carlos Peres</h6>
-                </div>
-                <div class="container d-flex justify-content-center p-2 text-white">
-                    <h6>carlitoperez@gmail.com</h6>
-                </div>
-                <div class="container d-flex justify-content-center text-white p-3">
-                    <h6><a onclick="cerrar()" class="text-danger">Cerrar Sesion</a></h6>
-                </div>
-
-
+            <div class="container" id="perfil">
 
             </div>
 
         </div>
     </div>
-
-
-
 
     <footer class=" container-fluid position-absolute bottom-0 bg-dark ">
         <ul class="nav nav-tabs justify-content-center mt-2" id="myTab" role="tablist">
@@ -167,7 +148,7 @@
                         trending_up</i>Estadisticas</button>
             </li>
             <li class="nav-item  mb-2" role="presentation">
-                <button class="nav-link text-success" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                <button class="nav-link text-success" id="contact-tab" onclick="pintarPerfil()" data-bs-toggle="tab" data-bs-target="#contact"
                     type="button" role="tab" aria-controls="contact" aria-selected="false"><i
                         class="material-icons text-success float-start">
                         account_circle</i>Perfil</button>
@@ -179,7 +160,6 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="./script/index.js"></script>
-    <script src="./script/usuario.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
