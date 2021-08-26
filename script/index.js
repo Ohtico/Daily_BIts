@@ -7,7 +7,16 @@ function cerrar() {
         title: 'Estas seguro que quieres cerrar sesion',
         icon: 'warning',
         background: `rgba(33, 33, 32)`,
-        confirmButtonText: `Cerrar`
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: `Salir`
+    }).then((result) => {
+        if (result.isConfirmed) {
+            localStorage.setItem('usuario', null)
+            window.location = "./usuario.html"
+        }else{
+
+        }
     })
 }
 // function comprobar() {
@@ -15,12 +24,15 @@ function cerrar() {
 //     // location.reload('./index.html'); //para volver a la pagina inicial
 // }
 function llamar() {
-    let body = document.getElementById('body')
-    body.innerHTML = `<div class="container-fluid">
+    let body = document.getElementById('body') //linea 32 boton X
+    body.innerHTML = `  <div class="container-fluid">
                         <label for="customRange2" class="form-label float-end texto text-white"><i
                         class="material-icons text-danger float-start">
                         favorite</i>4</label>
-                        <input type="range" class="form-range" min="0" max="30" id="customRange2">
+                        <button type="button" class="btn-close bg-dark" aria-label="Close"></button>  
+                        <div class="progress mt-4">
+                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
                         </div>
                         <div class="container">
                         <img src="../image/Property 1=1.png" class="float-start mt-3" style="width: 5rem;" alt="HTML5">
