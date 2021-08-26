@@ -1,7 +1,6 @@
 
 
 let perfil = document.getElementById('perfil')
-
 function cerrar() {
     swal.fire({
         title: 'Estas seguro que quieres cerrar sesion',
@@ -14,15 +13,10 @@ function cerrar() {
         if (result.isConfirmed) {
             localStorage.setItem('usuario', null)
             window.location = "./usuario.html"
-        }else{
-
         }
     })
 }
-// function comprobar() {
-//     let seleccion = document.querySelectorAll('.pro').value;
-//     // location.reload('./index.html'); //para volver a la pagina inicial
-// }
+
 function llamar() {
     let body = document.getElementById('body') //linea 32 boton X
     body.innerHTML = `  <div class="container-fluid">
