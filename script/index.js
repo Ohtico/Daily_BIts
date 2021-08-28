@@ -1,6 +1,10 @@
 
 
 let perfil = document.getElementById('perfil');
+let preguntas = ' http://localhost:4001/pregunta1'
+let posicion = 0;
+let wrongAnswer = 0;
+
 
 function volver(){
     window.location = "./index.html"
@@ -22,7 +26,21 @@ function cerrar() {
     })
 }
 
-function html() {
+async function html(i) {
+    
+    let resp = await fetch(preguntas)
+    let data = await resp.json();
+    
+
+     let q = data[i]; 
+    const a = q.respuesta;
+     rightAnswer= a[0]
+    console.log(rightAnswer)
+
+    let htmlQuestionCode = `<h7 class="text-white texto m-2 float-end"> ${q.pregunta}</h7>`
+    const htmlAnswers = a.map(currentA => `<button onClick="evaluateAnswer('${currentA}', this)" class="mt-3 btn btn-dark text-start answer"> <span> ${currentA} </span> <input type="radio"></button> ` )
+    posicion++;
+
     let body = document.getElementById('body') //linea 32 boton X
     body.innerHTML = `  <div class="container-fluid mt-4 align-center">
                         <div class="row">
@@ -34,15 +52,34 @@ function html() {
                         </div>
                         <div class="col col-lg-2">
                         <h6 class="text-white"><i class="material-icons text-danger justify-content-center">favorite</i>4</h6></div></div></div>
-                        <div class="container m-3">
-                        <img src="../image/Property 1=1.png" class="float-start mt-3" style="width: 5rem;" alt="HTML5">
-                        <h7 class="text-white texto m-2 float-end"> ¿Qué etiqueta es semánticamente correcta para el contenido principal?</h7>
-                        <button class="mt-5 btn btn-dark text-start " value="correcta" id="selec">Si <input type="radio"></button>
-                        <button class="mt-3 btn btn-dark text-start " value="mala" id="posible">No <input type="radio"></button>
-                        <button class="mt-3 btn btn-dark text-start" value="fail" id="correctas">No, algunas etiquetas HTML simples <input type="radio"></button></div>
-                        <div class="container m-3 container-fluid position-absolute bottom-0">
-                        <button class="mt-3 comprobar btn-secondary text-center position-relativa bottom-0" onclick="comprobar()">COMPROBAR</button></div>`
+                        <div class="container mt-3">
+                        <img src="../image/Property 1=1.png" class="float-start mt-5" style="width: 5rem;" alt="HTML5">
+                        ${htmlQuestionCode}
+                        ${htmlAnswers}
+                        <button onClick="html(posicion)"  class="btn mt-4 btn-secondary text-center position-relativa bottom-0">COMPROBAR</button></div>`
 }
+
+const evaluateAnswer = (answer, obj) => {
+    
+    document.querySelectorAll('.answer').forEach(a => a.classList.remove('rightCurr', 'wrongCurr'));
+
+    const parentP = obj.parentNode;
+   if(answer == rightAnswer ){
+    parentP.classList.add('rightCurr');
+   }else{
+    parentP.classList.add('wrongCurr');
+
+   }
+
+}
+const nextQuestion = _ =>{
+
+}
+
+
+
+
+
 function pintarPerfil(){
     let perfilLocal = JSON.parse(localStorage.getItem("usuario"));
     perfil.innerHTML = `<h1 class="text-white">Perfil</h1>
@@ -59,5 +96,3 @@ function pintarPerfil(){
                         <h6><a onclick="cerrar()" class="text-danger">Cerrar Sesion</a></h6>
                         </div>`
 }
-    
-

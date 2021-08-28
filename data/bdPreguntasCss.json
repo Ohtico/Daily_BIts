@@ -1,0 +1,29 @@
+{
+    "pregunta2": [
+        {
+          "pregunta": "¿Qué etiqueta es semánticamente correcta para el contenido principal?",
+          "respuesta": ["main", "section", "header"],
+          "id": 1
+        },
+        {
+            "pregunta": "¿Qué etiqueta HTML nos sirve para incluir archivos de JavaScript",
+            "respuesta": ["script", "br", "styles"],
+            "id": 2
+        },
+        {
+            "pregunta": "¿Qué significa DRY?",
+            "correcta": ["Dontrepeatypurself", "Dontrepeatyellow", "Dontrecicleyear"],
+            "id": 3
+        },
+        {
+            "pregunta": "Organiza la estructura de un documento HTML5",
+            "correcta": ["<!DOCTYPE html>", "<body></body>","<head></head>", "<html></html>"],
+            "id": 4
+        },
+        {
+            "pregunta": "Organiza la estructura de un documento HTML5",
+            "correcta": ["<!DOCTYPE html>", "<body></body>","<head></head>", "<html></html>"],
+            "id": 5
+        }
+    ]
+}
