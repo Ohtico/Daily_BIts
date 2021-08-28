@@ -5,6 +5,7 @@ let preguntas = ' http://localhost:4001/pregunta1'
 let posicion = 0;
 let buenaAnswer = 0;
 let malaAnswer = 0;
+
 let vida = 4;
 let progreso = 0;
 

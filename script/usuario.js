@@ -1,4 +1,5 @@
 
+    let loco = 3;
 let urlUsuario = ('http://localhost:4000/usuarios')
 let google = document.getElementById('google')
 let incribirse = document.getElementById('incribirse');
@@ -35,7 +36,7 @@ incribirse.addEventListener('click', async () => {
                     }
                 } else {
                     guardar(nombre, email, url)
-                    location.reload('./index.html');
+                    window.location = "./index.html"
                     const activo = {
                         nombre: nombre,
                         email: email,
@@ -63,7 +64,10 @@ async function guardar(nombre, email, url) {
         body: JSON.stringify({
             nombre,
             email,
-            url
+            url,
+            progeso: 0,
+            vida: 4
+
         }),
         headers: { "Content-Type": "application/json; charset=UTF-8" }
     })

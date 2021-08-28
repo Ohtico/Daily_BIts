@@ -4,31 +4,49 @@
       "nombres": "Victor Alberto",
       "email": "victor@gmail.com",
       "url": "https://wl-genial.cf.tsp.li/resize/728x/jpg/91b/430/964a9c5ac9933cc012d0bd80be.jpg",
+      "progeso": 0,
+      "vida": 4,
       "id": 1
     },
     {
       "nombre": "Lili Johanna",
       "email": "lilijohanna@gmail.com",
       "url": "https://thumbs.dreamstime.com/b/icono-ejecutivo-joven-del-perfil-de-la-mujer-81933333.jpg",
+      "progeso": 0,
+      "vida": 4,
       "id": 2
     },
     {
       "nombre": "jose",
       "email": "josegarcias@gmail.com",
       "url": "https://sociedadcivilnavarra.com/wp-content/uploads/2015/08/perfil-hombre.jpg",
+      "progeso": 0,
+      "vida": 4,
       "id": 3
     },
     {
       "nombre": "hernani gonzales",
       "email": "hernani@gmail.com",
       "url": "https://www.eltiempo.com/files/image_640_428/uploads/2017/06/27/595317e8f0820.jpeg",
+      "progeso": 0,
+      "vida": 4,
       "id": 4
     },
     {
       "nombre": "catalina josefina",
       "email": "catalina@gmail.com",
       "url": "https://as01.epimg.net/colombia/imagenes/2021/05/06/actualidad/1620334033_976860_1620334345_noticia_normal_recorte1.jpg",
+      "progeso": 0,
+      "vida": 4,
       "id": 5
+    },
+    {
+      "nombre": "Efralbert A",
+      "email": "efralberth@gmail.com",
+      "url": "https://muhimu.es/wp-content/uploads/2017/04/FRENTE-NITIDA.jpg",
+      "progeso": 0,
+      "vida": 4,
+      "id": 6
     }
   ]
 }
