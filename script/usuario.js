@@ -1,9 +1,10 @@
 
-    let loco = 3;
+
 let urlUsuario = ('http://localhost:4000/usuarios')
 let google = document.getElementById('google')
 let incribirse = document.getElementById('incribirse');
 let usuario = []
+
 
 incribirse.addEventListener('click', async () => {
     let resp = await fetch(urlUsuario)
@@ -40,7 +41,9 @@ incribirse.addEventListener('click', async () => {
                     const activo = {
                         nombre: nombre,
                         email: email,
-                        imag: url
+                        imag: url,
+                        progeso: 0,
+                        vida: 4
                     }
                     usuario.push(activo);
                     localStorage.setItem('usuario', JSON.stringify(usuario))

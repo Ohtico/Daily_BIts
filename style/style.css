@@ -42,3 +42,6 @@ h7{
 .wrongCurr{
     background:salmon;
 }
+.bordes{
+    border-radius: 8px;
+}
