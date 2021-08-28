@@ -6,33 +6,18 @@ let preguntas = ' http://localhost:4001/pregunta1' //bd preguntas html
 let urlUsuario = 'http://localhost:4000/usuarios' //bd usuario
 
 
+let tenerLocal = JSON.parse(localStorage.getItem("usuario"));
 let posicion = 0;
+let totalPreguntas = 0;
 let buenaAnswer = 0;
 let malaAnswer = 0;
 let vida = 4;
 let progreso = 0;
 
-function volver() {
-    window.location = "./index.html"
-}
 
-function cerrar() {
-    swal.fire({
-        title: 'Estas seguro que quieres cerrar sesion',
-        icon: 'warning',
-        background: `rgba(33, 33, 32)`,
-        showCancelButton: true,
-        cancelButtonText: 'Cancelar',
-        confirmButtonText: `Salir`
-    }).then((result) => {
-        if (result.isConfirmed) {
-            localStorage.setItem('usuario', null)
-            window.location = "./usuario.html"
-        }
-    })
-}
 
 async function html(i) {
+
 
     let resp = await fetch(preguntas)
     let data = await resp.json();
@@ -44,8 +29,22 @@ async function html(i) {
         }).then((result) => {
             if (result.isConfirmed) {
                 window.location = "./index.html";
+                
             }
         })
+        await fetch(`http://localhost:4000/usuarios/${tenerLocal.id}`, {
+        method: 'PUT',
+        body: JSON.stringify({
+            nombre: tenerLocal.nombre,
+            email: tenerLocal.email,
+            url: tenerLocal.url,
+            progeso: progreso,
+            vida: vida
+        }),
+        headers: {
+            "Content-Type": "application/json; charset=UTF-8"
+        }
+    })
 
     }
 
@@ -73,7 +72,8 @@ async function html(i) {
                         <img src="../image/Property 1=1.png" class="float-start mt-5" style="width: 5rem;" alt="HTML5">
                         ${htmlQuestionCode}
                         ${htmlAnswers}
-                        <button onClick="html(posicion)" class="btn mt-4 btn-secondary answer disabled text-center position-relativa bottom-0">COMPROBAR</button></div>`
+                        <button onClick="html(posicion)" id="subir" class="btn mt-4 btn-secondary answer disabled text-center position-relativa bottom-0">COMPROBAR</button></div>`
+                        
 }
 
 const evaluateAnswer = (answer) => {
@@ -89,6 +89,7 @@ const evaluateAnswer = (answer) => {
         vida--
     }
 }
+
 
 function pintarPerfil() {
     let perfilLocal = JSON.parse(localStorage.getItem("usuario"));
@@ -114,12 +115,32 @@ estadisticas.addEventListener('click', () => {
                         <p class="text-white">Los ultimos 7 Dias<br> <i class="material-icons text-white">
                         keyboard_arrow_down</i> </p>
                         <button class="mt-3 btn text-white text-start bordes"><i class="material-icons text-dark float-start">
-                        watch_later</i> Respuestas contestadas <span> variable </span></button>
+                        watch_later</i> Respuestas contestadas <span class="text-end"> variable </span></button>
                         <button class="mt-3 btn text-white text-start bordes"><i class="material-icons text-dark float-start">
-                        maps_ugc</i> Respuestas contestadas <span> variable </span></button>
+                        maps_ugc</i> Respuestas contestadas <span class="text-end"> variable </span></button>
                         <button class="mt-3 btn text-white text-start bordes"><i class="material-icons text-dark float-start">
-                        maps_ugc</i> Respuestas correctas <span> variable </span></button>
+                        maps_ugc</i> Respuestas correctas <span class="text-end"> variable </span></button>
                         <button class="mt-3 btn text-white text-start bordes"><i class="material-icons text-dark float-start">
-                        maps_ugc</i> Respuestas correctas <span> variable </span></button></div>`
+                        maps_ugc</i> Respuestas correctas <span class="text-end"> variable </span></button></div>`
 
 })
+
+function volver() {
+    window.location = "./index.html"
+}
+
+function cerrar() {
+    swal.fire({
+        title: 'Estas seguro que quieres cerrar sesion',
+        icon: 'warning',
+        background: `rgba(33, 33, 32)`,
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: `Salir`
+    }).then((result) => {
+        if (result.isConfirmed) {
+            localStorage.setItem('usuario', null)
+            window.location = "./usuario.html"
+        }
+    })
+}
