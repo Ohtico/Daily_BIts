@@ -1,0 +1,34 @@
+{
+    "pregunta3": [
+        {
+          "pregunta": "¿En qué lugar se ejecuta generalmente el código JavaScript?",
+          "respuesta": ["Cliente (en el propio navegador de internet)", "Servidor ", "la console"],
+          "id": 1
+        },
+        {
+            "pregunta": "La llamada al código Javascript debe colocarse en:",
+            "respuesta": ["La sección Body de la página", "Antes de la etiqueta HTML", "Puede colocarse en la sección Head o en Body"],
+            "id": 2
+        },
+        {
+            "pregunta": "¿Cuál es la instrucción usada para devolver un valor en una función de JavaScript?",
+            "respuesta": ["Return", "Send", "Value"],
+            "id": 3
+        },
+        {
+            "pregunta": "Para terminar las instrucciones en Javascript se utiliza:",
+            "respuesta": ["Un punto y coma o un salto de línea", "Un punto y coma ","La sentencia End"],
+            "id": 4
+        },
+        {
+            "pregunta": "Para concatenar cadenas de caracteres en Javascript se usa el carácter:",
+            "respuesta": ["+ (más)", ". (punto)"," & (ampersand)"],
+            "id": 5
+        },
+        {
+            "pregunta": "¿Todo el código JavaScript debe estar por fuerza dentro del archivo .html de la página web?",
+            "respuesta": ["No, es posible incluir código JavaScript en ficheros de extensión .js y hacer un “include” en la sección HEAD de la página HTML", "Sí, porque si no, no se podría ejecutar en el navegador","ninguna de las anteriores"],
+            "id": 6
+        }
+    ]
+}
