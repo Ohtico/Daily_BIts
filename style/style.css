@@ -33,9 +33,6 @@ h7{
     border: 1px solid #fff;
     border-radius: 25px;
 }
-.comprobar:active{
-    background: green;
-}
 .rightCurr{
     background: palegreen;
 }

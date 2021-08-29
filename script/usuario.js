@@ -82,6 +82,7 @@ ingreso.addEventListener('click', async () => {
     let test = await fetch(urlUsuario)
     let datos = await test.json()
     let usuario = document.getElementById('exampleFormControlInput1').value;
+    
     let verificar = datos.find(correo => correo.email.toLowerCase() == usuario.toLowerCase())
     if(verificar != undefined){
         localStorage.setItem('usuario', JSON.stringify(verificar))
