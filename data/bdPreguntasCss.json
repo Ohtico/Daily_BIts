@@ -1,29 +1,34 @@
 {
     "pregunta2": [
         {
-          "pregunta": "¿Qué etiqueta es semánticamente correcta para el contenido principal?",
-          "respuesta": ["main", "section", "header"],
+          "pregunta": "¿Cuál es el lugar correcto en un documento HTML para hacer referencia a una hoja de estilo externa?",
+          "respuesta": ["En la sección head", "Al final del documento", "En la sección body"],
           "id": 1
         },
         {
-            "pregunta": "¿Qué etiqueta HTML nos sirve para incluir archivos de JavaScript",
-            "respuesta": ["script", "br", "styles"],
+            "pregunta": "El valor de este atributo no puede ser duplicado, debe ser único en todo el documento.",
+            "respuesta": ["ID", "class", "etiqueta"],
             "id": 2
         },
         {
-            "pregunta": "¿Qué significa DRY?",
-            "correcta": ["Dontrepeatypurself", "Dontrepeatyellow", "Dontrecicleyear"],
+            "pregunta": "Es un atributo más flexible y puede ser asignado a cada elemento HTML que comparte un diseño similar, se referencia por medio de un punto .",
+            "respuesta": ["class", "etiqueta", "id"],
             "id": 3
         },
         {
-            "pregunta": "Organiza la estructura de un documento HTML5",
-            "correcta": ["<!DOCTYPE html>", "<body></body>","<head></head>", "<html></html>"],
+            "pregunta": "La propiedad CSS margin: 10em 5em significa:",
+            "respuesta": ["margin-top, margin-bottom = 10em y margin-right, margin-left = 5em", "margin-right, margin-left = 10em y margin-top, margin-bottom = 5em","margin-top, margin-left = 10em y margin-bottom, margin-right = 5em"],
             "id": 4
         },
         {
-            "pregunta": "Organiza la estructura de un documento HTML5",
-            "correcta": ["<!DOCTYPE html>", "<body></body>","<head></head>", "<html></html>"],
+            "pregunta": "¿Para qué se utiliza la codificación META CHARSET=UTF-8  en una página Web?",
+            "respuesta": ["Para usar y visualizar correctamente las ñ y los acentos.", "Para diferenciar entre el Inglés y el español.","Para escribir correctamente las instrucciones."],
             "id": 5
+        },
+        {
+            "pregunta": "¿Cuál es el orden correcto de los siguientes elementos?",
+            "respuesta": ["header, nav, section, article, footer", "header, section, footer, nav, article","nav, header, section, article, footer"],
+            "id": 6
         }
     ]
 }

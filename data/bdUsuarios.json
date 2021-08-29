@@ -43,13 +43,13 @@
       "nombre": "hernani gonzales",
       "email": "hernani@gmail.com",
       "url": "https://www.eltiempo.com/files/image_640_428/uploads/2017/06/27/595317e8f0820.jpeg",
-      "progesoHtml": 85,
-      "progesoCcs": 0,
+      "progesoHtml": 102,
+      "progesoCcs": 102,
       "progesoJavaScript": 0,
-      "totalPreguntas": 30,
-      "totalCorrectas": 29,
+      "totalPreguntas": 84,
+      "totalCorrectas": 83,
       "totalMalas": 1,
-      "vida": 3,
+      "vida": 4,
       "id": 4
     },
     {
