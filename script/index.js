@@ -22,19 +22,18 @@ let buenaAnswer = 0;
 let malaAnswer = 0;
 let vida = 4;
 
-
-
 // peticiones y curso de html
 async function html(i) {
-
+    // peticion tipo get para imprimir preguntas
     let resp = await fetch(preguntas)
     let data = await resp.json();
 
+
+    // peticion tipo get para actualizar la bd
     let pedirEstadisticas = JSON.parse(localStorage.getItem("usuario"));
     let peticion = await fetch(urlUsuario)
     let contenido = await peticion.json();
     let verificar = contenido.find(datos => datos.id == pedirEstadisticas.id)
-
     let todasLasPreguntas = verificar.totalPreguntas + totalPreguntas;
     let buenasPreguntas = verificar.totalCorrectas + buenaAnswer;
     let malasPreguntas = verificar.totalMalas + malaAnswer;
@@ -47,7 +46,6 @@ async function html(i) {
         }).then((result) => {
             if (result.isConfirmed) {
                 window.location = "./index.html";
-
             }
         })
         await fetch(`http://localhost:4000/usuarios/${tenerLocal.id}`, {

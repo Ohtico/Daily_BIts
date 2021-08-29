@@ -42,7 +42,12 @@ incribirse.addEventListener('click', async () => {
                         nombre: nombre,
                         email: email,
                         imag: url,
-                        progeso: 0,
+                        progesoHtml: 0,
+                        progesoCcs: 0,
+                        progesoJavaScript: 0,
+                        totalPreguntas: 0,
+                        totalCorrectas: 0,
+                        totalMalas: 0,
                         vida: 4
                     }
                     usuario.push(activo);
@@ -68,7 +73,12 @@ async function guardar(nombre, email, url) {
             nombre,
             email,
             url,
-            progeso: 0,
+            progesoHtml: 0,
+            progesoCcs: 0,
+            progesoJavaScript: 0,
+            totalPreguntas: 0,
+            totalCorrectas: 0,
+            totalMalas: 0,
             vida: 4
 
         }),
