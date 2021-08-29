@@ -125,7 +125,17 @@ const evaluateAnswer = (answer) => {
         vida--
     }
 }
-
+function otros(){
+    swal.fire({
+        title: '<span class="text-white">En construcción',
+        background: `rgba(127, 90, 240)`,
+        timer: 2500,
+        showConfirmButton: false,
+        html:   `<div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>`
+    })
+}
 
 function pintarPerfil() {
     let perfilLocal = JSON.parse(localStorage.getItem("usuario"));
@@ -204,13 +214,13 @@ async function css(i) {
     let buenasPreguntas = verificar.totalCorrectas + buenaAnswer;
     let malasPreguntas = verificar.totalMalas + malaAnswer;
 
-    if(i == 0){
+    if (i == 0) {
         progesoCcs = 0;
-    }else{
+    } else {
         progesoCcs = progesoCcs + 17;
     }
-    
-    
+
+
     if (i == 6) {
         swal.fire({
             title: 'Felicidades culminaste con exito',
@@ -297,9 +307,9 @@ async function js(i) {
     let buenasPreguntas = verificar.totalCorrectas + buenaAnswer;
     let malasPreguntas = verificar.totalMalas + malaAnswer;
 
-    if(i == 0){
+    if (i == 0) {
         progesoJavaScript = 0;
-    }else{
+    } else {
         progesoJavaScript = progesoJavaScript + 17;
     }
     if (i == 6) {
@@ -320,7 +330,7 @@ async function js(i) {
                 url: tenerLocal.url,
                 progesoHtml: verificar.progesoHtml,
                 progesoCcs: verificar.progesoCcs,
-                progesoJavaScript: progesoJavaScript, 
+                progesoJavaScript: progesoJavaScript,
                 totalPreguntas: todasLasPreguntas,
                 totalCorrectas: buenasPreguntas,
                 totalMalas: malasPreguntas,
