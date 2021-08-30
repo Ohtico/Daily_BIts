@@ -123,15 +123,28 @@ const evaluateAnswer = (answer) => {
         parentP.classList.add('wrongCurr');
         malaAnswer++
         vida--
+    }  
+    
+    if(vida == 0){
+        swal.fire({
+        title: '<span class="text-white">Culminaste el proceso y debes empezar desde cero en cualquiera de las categorías',
+        background: `rgba(127, 90, 240)`,
+        showConfirmButton: true,
+            confirmButtonText: 'Volver al inicio'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location = "./index.html";
+            }
+        })
     }
 }
-function otros(){
+function otros() {
     swal.fire({
         title: '<span class="text-white">En construcción',
         background: `rgba(127, 90, 240)`,
         timer: 2500,
         showConfirmButton: false,
-        html:   `<div class="spinner-border text-danger" role="status">
+        html: `<div class="spinner-border text-danger" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>`
     })

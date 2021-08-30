@@ -42,3 +42,14 @@ h7{
 .bordes{
     border-radius: 8px;
 }
+#progresoPrimero{
+    width: 6rem;
+    height: 6rem;
+}
+#ajuro{
+    max-width: 150px;
+    
+}
+#posiblemente{
+    z-index: 3000;
+}
